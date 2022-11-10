@@ -43,59 +43,19 @@
                     </meta>
                 </property>
 
-                <block name="content" default-type="editor" minOccurs="0">
+                <block name="blocks" default-type="text" minOccurs="0">
                     <meta>
                         <title>sulu.news.content</title>
                     </meta>
                     <types>
-                        <type name="title">
+                        <type name="text">
                             <meta>
-                                <title>sulu.news.title</title>
-                            </meta>
-                            <properties>
-                                <property name="title" type="text_line" colspan="12">
-                                    <meta>
-                                        <title>sulu.news.title</title>
-                                    </meta>
-                                </property>
-
-                                <property name="titleType" type="single_select" mandatory="true">
-                                    <meta>
-                                        <title>Type</title>
-                                    </meta>
-                                    <params>
-                                        <param name="default_value" value="h1"/>
-                                        <param name="values" type="collection">
-                                            <param name="h1">
-                                                <meta>
-                                                    <title>H1</title>
-                                                </meta>
-                                            </param>
-                                            <param name="h2">
-                                                <meta>
-                                                    <title>H2</title>
-                                                </meta>
-                                            </param>
-                                            <param name="h3">
-                                                <meta>
-                                                    <title>H3</title>
-                                                </meta>
-                                            </param>
-                                        </param>
-                                    </params>
-                                </property>
-
-
-                            </properties>
-                        </type>
-                        <type name="editor">
-                            <meta>
-                                <title>sulu.news.editor</title>
+                                <title>sulu.news.text</title>
                             </meta>
                             <properties>
                                 <property name="text" type="text_editor" colspan="12">
                                     <meta>
-                                        <title>sulu.news.editor</title>
+                                        <title>sulu.news.text</title>
                                     </meta>
                                 </property>
                             </properties>

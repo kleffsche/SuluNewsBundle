@@ -14,7 +14,7 @@
     "sulu_activity.description.news.removed": "{userFullName} hat die News \"{resourceTitle}\" entfernt",
     "sulu_activity.resource.news": "News",
     "sulu.news.quote": "Zitat",
-    "sulu.news.editor": "Editor",
+    "sulu.news.text": "Text",
     "sulu.news.title": "Titel",
     "sulu_news.news_select": "Wähle News"
 }
