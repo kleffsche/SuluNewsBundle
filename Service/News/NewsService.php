@@ -148,7 +148,7 @@ class NewsService implements NewsServiceInterface
     {
         $news = $this->newsRepository->findById($id);
         if (!$news) {
-            throw new \Exception($id);
+            throw new \Exception();
         }
 
         $this->domainEventCollector->collect(new NewsRemovedActivityEvent($news, ['name' => $news->getTitle()]));

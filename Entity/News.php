@@ -146,11 +146,12 @@ class News implements NewsInterface, AuditableInterface, RoutableInterface
         $this->title = $title;
     }
 
-    /**
-     * @return string
-     */
-    public function getBlocks(): string
+    public function getBlocks()
     {
+        if (!$this->blocks) {
+            return [];
+        }
+
         return $this->blocks;
     }
 
