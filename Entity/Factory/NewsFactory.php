@@ -63,8 +63,8 @@ class NewsFactory extends AbstractFactory implements NewsFactoryInterface
             $news->setPublishedAt(new \DateTime($this->getProperty($data, 'publishedAt')));
         }
 
-        if ($this->getProperty($data, 'content')) {
-            $news->setContent($this->getProperty($data, 'content'));
+        if ($this->getProperty($data, 'blocks')) {
+            $news->setBlocks($this->getProperty($data, 'blocks'));
         }
 
         if ($this->getProperty($data, 'ext')) {
