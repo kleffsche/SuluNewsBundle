@@ -21,7 +21,7 @@ interface NewsInterface
 
     public function getTitle(): ?string;
 
-    public function getContent();
+    public function getBlocks();
 
     public function getCreated(): ?\DateTime;
 

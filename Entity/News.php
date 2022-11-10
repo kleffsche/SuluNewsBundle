@@ -72,7 +72,7 @@ class News implements NewsInterface, AuditableInterface, RoutableInterface
     /**
      * @var string
      */
-    private $content;
+    private $blocks;
 
     /**
      * @var DateTime
@@ -146,18 +146,20 @@ class News implements NewsInterface, AuditableInterface, RoutableInterface
         $this->title = $title;
     }
 
-    public function getContent()
+    /**
+     * @return string
+     */
+    public function getBlocks(): string
     {
-        if (!$this->content) {
-            return [];
-        }
-
-        return $this->content;
+        return $this->blocks;
     }
 
-    public function setContent($content): void
+    /**
+     * @param string $blocks
+     */
+    public function setBlocks(string $blocks): void
     {
-        $this->content = $content;
+        $this->blocks = $blocks;
     }
 
     /**

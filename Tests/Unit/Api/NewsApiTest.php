@@ -35,7 +35,7 @@ final class NewsApiTest extends TestCase
         static::assertNull($apiDto->getTitle());
         static::assertNull($apiDto->getTeaser());
         static::assertSame([], $apiDto->getHeader());
-        static::assertSame([], $apiDto->getContent());
+        static::assertSame([], $apiDto->getBlocks());
         static::assertNull($apiDto->getPublishedAt());
         static::assertSame([], $apiDto->getTags());
         static::assertSame('', $apiDto->getRoute());
@@ -57,11 +57,11 @@ final class NewsApiTest extends TestCase
                     'title' => 'Test',
                 ],
                 [
-                    'type' => 'editor',
+                    'type' => 'text',
                     'text' => '<p>Test Editor</p>',
                 ],
             ],
-            $apiDto->getContent()
+            $apiDto->getBlocks()
         );
         static::assertSame('2017-08-31 00:00:00', $apiDto->getPublishedAt()->format('Y-m-d H:i:s'));
         static::assertSame('/test-1', $apiDto->getRoute());

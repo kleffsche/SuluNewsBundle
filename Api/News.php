@@ -68,16 +68,16 @@ class News extends ApiWrapper
 
     /**
      * @VirtualProperty
-     * @SerializedName("content")
+     * @SerializedName("blocks")
      * @Groups({"fullNews"})
      */
-    public function getContent(): array
+    public function getBlocks(): array
     {
-        if (!$this->entity->getContent()) {
+        if (!$this->entity->getBlocks()) {
             return [];
         }
 
-        return $this->entity->getContent();
+        return $this->entity->getBlocks();
     }
 
     /**
