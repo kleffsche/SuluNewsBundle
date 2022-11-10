@@ -155,10 +155,7 @@ class News implements NewsInterface, AuditableInterface, RoutableInterface
         return $this->blocks;
     }
 
-    /**
-     * @param string $blocks
-     */
-    public function setBlocks(string $blocks): void
+    public function setBlocks($blocks): void
     {
         $this->blocks = $blocks;
     }
