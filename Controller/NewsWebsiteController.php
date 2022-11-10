@@ -33,7 +33,7 @@ class NewsWebsiteController extends AbstractController
         if ($partial) {
             $content = $this->renderBlock(
                 'news/index.html.twig',
-                'blocks',
+                'content',
                 ['news' => $news]
             );
         } elseif ($preview) {
