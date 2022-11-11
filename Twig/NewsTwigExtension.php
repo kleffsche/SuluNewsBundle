@@ -27,7 +27,8 @@ class NewsTwigExtension extends AbstractExtension
     public function __construct(
         private readonly Cache $cache,
         private readonly NewsRepository $newsRepository
-    ) {}
+    ) {
+    }
 
     public function getFunctions()
     {
