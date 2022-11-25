@@ -14,10 +14,12 @@ declare(strict_types=1);
 namespace TheCadien\Bundle\SuluNewsBundle\Entity\Factory;
 
 use Sulu\Bundle\TagBundle\Tag\TagManagerInterface;
+use Sulu\Component\Persistence\RelationTrait;
 use TheCadien\Bundle\SuluNewsBundle\Entity\News;
 
 class TagFactory extends AbstractFactory implements TagFactoryInterface
 {
+    use RelationTrait;
     private TagManagerInterface $tagManager;
 
     /**
@@ -29,8 +31,6 @@ class TagFactory extends AbstractFactory implements TagFactoryInterface
     }
 
     /**
-     * @param $tags
-     *
      * @return bool
      */
     public function processTags(News $news, $tags)
@@ -75,8 +75,6 @@ class TagFactory extends AbstractFactory implements TagFactoryInterface
 
     /**
      * Adds a new tag to the given contact and persist it with the given object manager.
-     *
-     * @param $data
      *
      * @return bool True if there was no error, otherwise false
      */
