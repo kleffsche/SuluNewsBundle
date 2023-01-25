@@ -1,0 +1,8 @@
+app_news_api:
+    type: rest
+    prefix: /admin/api
+    resource: TheCadien\SuluNewsBundle\Controller\Admin\NewsController
+    name_prefix: sulu_news.
+    options:
+        expose: true
+
